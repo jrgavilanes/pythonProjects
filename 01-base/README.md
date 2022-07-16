@@ -14,8 +14,9 @@ pip freeze > requirements.txt
 ```bash
 janrax@JANRAX-HOME MINGW64 ~/PycharmProjects/pythonProjects/01-base (master)
 $ pytest -v -s
-================================================================================================================== test session starts ==================================================================================================================
-platform win32 -- Python 3.9.1, pytest-7.1.2, pluggy-1.0.0 -- c:\users\janrax\pycharmprojects\pythonprojects\venv\scripts\python.exe
+========================== test session starts =========================
+platform win32 -- Python 3.9.1, pytest-7.1.2, pluggy-1.0.0 -- 
+c:\users\janrax\pycharmprojects\pythonprojects\venv\scripts\python.exe
 cachedir: .pytest_cache
 rootdir: C:\Users\janrax\PycharmProjects\pythonProjects\01-base
 collected 1 item                                                                                                                                                                                                                                         
