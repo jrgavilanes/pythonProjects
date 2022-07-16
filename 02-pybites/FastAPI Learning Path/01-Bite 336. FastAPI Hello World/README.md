@@ -1,4 +1,4 @@
-# Enunciado
+# Subject
 
 https://codechalleng.es/bites/336/
 
@@ -44,7 +44,7 @@ Some notes on this learning path:
 
 Good luck and welcome onboard! We hope this will be a fun and rich learning experience.
 
-# Arranca servidor
+# Start Service in Server
 
     uvicorn main:app --host "0.0.0.0" --port 8000 --reload
 

@@ -1,7 +1,7 @@
 import main
 
 
-def test_Food_Model():
+def test_food_model():
     try:
         print()
         food = main.Food(
@@ -24,5 +24,6 @@ def test_Food_Model():
         print(food)
         assert True
 
-    except:
+    except Exception as e:
+        print(e)
         assert False

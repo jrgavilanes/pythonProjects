@@ -1,15 +1,15 @@
-# Crear entorno python
+# Create python environment
 
 ```bash
 python -m venv venv
 . venv/Script/activate
 pip install -r requirements.txt
 
-# Previamente.
+# Prior.
 pip freeze > requirements.txt
 ```
 
-# Lanzar Tests
+# Launch Tests
 
 ```bash
 janrax@JANRAX-HOME MINGW64 ~/PycharmProjects/pythonProjects/01-base (master)
