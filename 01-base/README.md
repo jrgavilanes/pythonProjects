@@ -21,5 +21,5 @@ cachedir: .pytest_cache
 rootdir: C:\Users\janrax\PycharmProjects\pythonProjects\01-base
 collected 1 item
 
-test_main.py::test_main PASSED      
+test_main_integration.py::test_main PASSED      
 ```
