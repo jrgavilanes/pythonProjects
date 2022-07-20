@@ -45,8 +45,3 @@ class FoodEntry(BaseModel):
     @property
     def total_calories(self):
         return self.number_servings * self.food.kcal_per_serving
-
-
-if __name__ == '__main__':
-    user = User(id=1, username="user1", password="ojete")
-    print(user)
