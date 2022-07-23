@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+httpie
+requests
+pytest
+passlib
+bcrypt
+bs4
