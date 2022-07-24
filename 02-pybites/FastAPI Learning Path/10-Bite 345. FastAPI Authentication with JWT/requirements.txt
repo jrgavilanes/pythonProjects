@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+httpie
+requests
+pytest
+passlib[bcrypt]
+bcrypt
+python-jose
+python-multipart
