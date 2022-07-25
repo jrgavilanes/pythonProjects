@@ -6,7 +6,7 @@ app = fastapi.FastAPI()
 
 @app.get("/")
 def root():
-    msg = "Welcome to FastAPI Learning Path 🐍 🎉"
+    msg = "Welcome to 01-FastAPI Learning Path 🐍 🎉"
     return {"message": msg}
 
 
