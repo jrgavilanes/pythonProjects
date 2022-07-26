@@ -31,5 +31,13 @@ def get_pybites_top_tags(n=10):
     return Counter(data).most_common()[:n]
 
 
+# solution provided
+# def get_pybites_top_tags(n=10):
+#     """use Counter to get the top 10 PyBites tags from the feed
+#        data already loaded into the content variable"""
+#     tree = ET.fromstring(content)
+#     tags = (e.text for e in tree.findall(path=".//category"))
+#     return Counter(tags).most_common(n)
+
 if __name__ == '__main__':
     print(get_pybites_top_tags(5))
