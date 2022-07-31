@@ -2,7 +2,12 @@
 
 ```bash
 python -m venv venv
-. venv/Script/activate
+
+# Windows 
+venv/Script/activate.bat
+# Linux 
+. venv/bin/activate
+
 pip install -r requirements.txt
 
 # Prior.

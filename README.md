@@ -17,3 +17,6 @@ https://codechalleng.es/tips/extract-dictionary-keys-and-values
 ## Mis certificados
 
 https://codechalleng.es/badge/ecec657b-45c1-4743-82e9-be3b684b4bd8
+
+https://realpython.com/certificates/b4d2cecc-f012-4dfb-b3e4-225c436f1a65/
+
