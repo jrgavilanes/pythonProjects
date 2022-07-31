@@ -133,3 +133,9 @@ The text format is pure SQL so you can also use the .dump command to export an S
     $ createdb ex2
     $ sqlite3 ex1 .dump | psql ex2
 
+## Claves foraneas
+
+    sqlite> PRAGMA foreign_keys = ON;
+    sqlite> create table employee ( id integer primary key autoincrement, salary int not null, people_id integer, foreign key (people_id) references people(person_id));
+    sqlite> insert into employee ( salary, people_id ) values ( 1000, 9);
+    Error: stepping, FOREIGN KEY constraint failed (19)
