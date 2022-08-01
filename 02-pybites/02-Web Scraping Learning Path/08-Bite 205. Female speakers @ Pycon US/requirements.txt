@@ -1,0 +1,4 @@
+pytest
+bs4
+requests
+gender_guesser
