@@ -1,5 +1,12 @@
 # Apuntes de Python
 
+## Preparar entorno desarrollo
+
+### BD Postgres Local
+
+    docker-compose -f docker-compose-postgres up
+
+
 ## Python tips
 
 https://codechalleng.es/tips/get-annotations
