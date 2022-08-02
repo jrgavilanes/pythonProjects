@@ -1,11 +1,13 @@
 from sqlalchemy import create_engine, text
 
-engine = create_engine("sqlite:///./example1.db", echo=True, future=True)
+# Si no existe el fichero, lo crea.
+engine = create_engine("sqlite:///./example.db", echo=True, future=True)
 conn = engine.connect()
 
 # Creación
 conn.execute(text("""
 CREATE TABLE IF NOT EXISTS users ( 
+id integer primary key autoincrement,
 name varchar, 
 age int
 );
@@ -14,7 +16,17 @@ age int
 # Insertar
 NAME = "optimus prime"
 AGE = 200
-result = conn.execute(text("INSERT INTO users VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
+result = conn.execute(text("INSERT INTO users(name, age) VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
+print(result)
+
+# Commit necesario
+conn.commit()
+
+# Insertar múltiples registros
+NAME = "optimus prime"
+AGE = 200
+result = conn.execute(text("INSERT INTO users(name, age) VALUES (:name, :age)"),
+                      [{"name": NAME, "age": AGE}, {"name": NAME, "age": AGE}])
 print(result)
 
 # Commit necesario
@@ -36,6 +48,6 @@ for row in result.mappings():
     print(row)
 
 # Rollback
-NAME = "cabro-nazi"
-result = conn.execute(text("INSERT INTO users VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
+NAME = "MALOTE"
+result = conn.execute(text("INSERT INTO users(name, age) VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
 conn.rollback()

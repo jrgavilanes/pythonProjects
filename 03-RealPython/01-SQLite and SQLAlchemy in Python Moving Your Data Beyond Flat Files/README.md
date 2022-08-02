@@ -118,17 +118,20 @@ sqlite>
 
 10. Converting An Entire Database To A Text File
 
-Use the ".dump" command to convert the entire contents of a database into a single UTF-8 text file. This file can be converted back into a database by piping it back into sqlite3.
+Use the ".dump" command to convert the entire contents of a database into a single UTF-8 text file. This file can be
+converted back into a database by piping it back into sqlite3.
 
 A good way to make an archival copy of a database is this:
 
     $ sqlite3 ex1 .dump | gzip -c >ex1.dump.gz
 
-This generates a file named ex1.dump.gz that contains everything you need to reconstruct the database at a later time, or on another machine. To reconstruct the database, just type:
+This generates a file named ex1.dump.gz that contains everything you need to reconstruct the database at a later time,
+or on another machine. To reconstruct the database, just type:
 
     $ zcat ex1.dump.gz | sqlite3 ex2
 
-The text format is pure SQL so you can also use the .dump command to export an SQLite database into other popular SQL database engines. Like this:
+The text format is pure SQL so you can also use the .dump command to export an SQLite database into other popular SQL
+database engines. Like this:
 
     $ createdb ex2
     $ sqlite3 ex1 .dump | psql ex2
@@ -140,18 +143,19 @@ The text format is pure SQL so you can also use the .dump command to export an S
     sqlite> insert into employee ( salary, people_id ) values ( 1000, 9);
     Error: stepping, FOREIGN KEY constraint failed (19)
 
-
 ## Ejemplo básico python sqlarchemy
 
 ```python
 from sqlalchemy import create_engine, text
 
-engine = create_engine("sqlite:///./example1.db", echo=True, future=True)
+# Si no existe el fichero, lo crea.
+engine = create_engine("sqlite:///./example.db", echo=True, future=True)
 conn = engine.connect()
 
 # Creación
 conn.execute(text("""
 CREATE TABLE IF NOT EXISTS users ( 
+id integer primary key autoincrement,
 name varchar, 
 age int
 );
@@ -160,7 +164,17 @@ age int
 # Insertar
 NAME = "optimus prime"
 AGE = 200
-result = conn.execute(text("INSERT INTO users VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
+result = conn.execute(text("INSERT INTO users(name, age) VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
+print(result)
+
+# Commit necesario
+conn.commit()
+
+# Insertar múltiples registros
+NAME = "optimus prime"
+AGE = 200
+result = conn.execute(text("INSERT INTO users(name, age) VALUES (:name, :age)"),
+                      [{"name": NAME, "age": AGE}, {"name": NAME, "age": AGE}])
 print(result)
 
 # Commit necesario
@@ -183,6 +197,7 @@ for row in result.mappings():
 
 # Rollback
 NAME = "MALOTE"
-result = conn.execute(text("INSERT INTO users VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
+result = conn.execute(text("INSERT INTO users(name, age) VALUES (:name, :age)"), [{"name": NAME, "age": AGE}])
 conn.rollback()
+
 ```
