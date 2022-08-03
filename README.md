@@ -25,6 +25,8 @@ https://codechalleng.es/tips/create-a-temporary-directory
 
 https://codechalleng.es/tips/sorted-min-max-key-argument
 
+https://codechalleng.es/tips/the-str-isalpha-method
+
 ## General tips
 
 Setear prompt minimalista
