@@ -25,9 +25,11 @@ https://codechalleng.es/tips/create-a-temporary-directory
 
 https://codechalleng.es/tips/sorted-min-max-key-argument
 
-## Mis certificados
+## General tips
 
-https://codechalleng.es/badge/ecec657b-45c1-4743-82e9-be3b684b4bd8
+Setear prompt minimalista
 
-https://realpython.com/certificates/b4d2cecc-f012-4dfb-b3e4-225c436f1a65/
+    export PS1='\u@\h: '
 
+    # con directorio final
+    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]: ../\[\033[01;36m\]\W\[\033[00m\]\$ '

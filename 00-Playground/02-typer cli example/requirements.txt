@@ -1,0 +1,5 @@
+typer[all]
+httpx
+bs4
+colorama
+aiohttp
