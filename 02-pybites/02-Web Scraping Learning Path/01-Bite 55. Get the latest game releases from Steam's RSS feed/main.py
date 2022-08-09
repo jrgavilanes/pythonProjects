@@ -18,6 +18,7 @@ def get_games():
 
     return result
 
+
 # solution provided
 # def get_games():
 #     """Parses Steam's RSS feed and returns a list of Game namedtuples"""

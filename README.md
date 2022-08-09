@@ -27,6 +27,8 @@ https://codechalleng.es/tips/sorted-min-max-key-argument
 
 https://codechalleng.es/tips/the-str-isalpha-method
 
+https://codechalleng.es/tips/detect-accented-characters
+
 ## General tips
 
 Setear prompt minimalista
