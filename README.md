@@ -29,6 +29,8 @@ https://codechalleng.es/tips/the-str-isalpha-method
 
 https://codechalleng.es/tips/detect-accented-characters
 
+https://codechalleng.es/tips/progress-spinner
+
 ## General tips
 
 Setear prompt minimalista
