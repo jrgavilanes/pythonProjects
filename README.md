@@ -31,6 +31,8 @@ https://codechalleng.es/tips/detect-accented-characters
 
 https://codechalleng.es/tips/progress-spinner
 
+https://codechalleng.es/tips/dataclasses-for-the-win
+
 ## General tips
 
 Setear prompt minimalista

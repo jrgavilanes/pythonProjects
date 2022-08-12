@@ -119,8 +119,8 @@ def test_enchantment_class_print(enchantment_mock, capfd):
 
 
 def test_item_class(item_mock, enchantment_mock):
-    item_mock.items.append(enchantment_mock)
-    assert item_mock.items[0].name == "Python Developer"
+    item_mock.enchantments.append(enchantment_mock)
+    assert item_mock.enchantments[0].name == "Python Developer"
 
 
 def test_item_class_print(item_mock, capfd):
@@ -178,7 +178,7 @@ def test_generate_enchantments_from_source():
     ],
 )
 def test_gen_items_mocked(mocked_generate_items, item, expected):
-    assert mocked_generate_items[item].items[0].name == expected
+    assert mocked_generate_items[item].enchantments[0].name == expected
 
 
 @pytest.mark.parametrize(
@@ -246,7 +246,7 @@ def test_gen_items_mocked(mocked_generate_items, item, expected):
     ],
 )
 def test_gen_items(coders_dataset, item, expected):
-    assert [enc.id_name for enc in coders_dataset[item].items] == expected
+    assert [enc.id_name for enc in coders_dataset[item].enchantments] == expected
 
 
 @pytest.mark.parametrize(
