@@ -12,9 +12,6 @@ HTML_FILE = TMP / "enchantment_list_pc.html"
 URL = ("https://bites-data.s3.us-east-2.amazonaws.com/"
        "minecraft-enchantment.html")
 
-enchantment_data = None
-
-
 class Enchantment:
     """Minecraft enchantment class
 
@@ -163,8 +160,6 @@ def main():
     """This function is here to help you test your final code.
 
     Once complete, the print out should match what's at the bottom of this file"""
-    global enchantment_data
-    get_soup()
     soup = get_soup()
     enchantment_data = generate_enchantments(soup)
     minecraft_items = generate_items(enchantment_data)
