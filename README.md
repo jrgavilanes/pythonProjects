@@ -33,6 +33,8 @@ https://codechalleng.es/tips/progress-spinner
 
 https://codechalleng.es/tips/dataclasses-for-the-win
 
+https://codechalleng.es/tips/robust-sorting-with-a-function
+
 ## General tips
 
 Setear prompt minimalista
