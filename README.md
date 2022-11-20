@@ -6,7 +6,6 @@
 
     docker-compose -f docker-compose-postgres up
 
-
 ## Python tips
 
 https://codechalleng.es/tips/get-annotations
@@ -34,6 +33,8 @@ https://codechalleng.es/tips/progress-spinner
 https://codechalleng.es/tips/dataclasses-for-the-win
 
 https://codechalleng.es/tips/robust-sorting-with-a-function
+
+https://codechalleng.es/tips/how-to-use-caching-memoization
 
 ## General tips
 
