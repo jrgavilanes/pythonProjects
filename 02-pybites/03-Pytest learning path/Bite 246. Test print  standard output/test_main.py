@@ -30,7 +30,7 @@ def test_print_workout_days_cardio(capsys):
     assert captured.out == "Wed\n"
 
 
-# PROVIDED
+# SOLUTION PROVIDED
 # import pytest
 #
 # from workouts import print_workout_days
