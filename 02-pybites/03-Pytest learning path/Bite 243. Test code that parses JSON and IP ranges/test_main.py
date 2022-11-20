@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from ipaddress import IPv4Network
+from ipaddress import IPv4Network, AddressValueError
 from urllib.request import urlretrieve
 
 import pytest
@@ -23,9 +23,21 @@ def json_file():
 
 # write your pytest code ...
 def test_get_aws_service_range():
-    # urlretrieve(URL, PATH)
+    urlretrieve(URL, PATH)
     ipv4_service_ranges = parse_ipv4_service_ranges(PATH)
     assert len(get_aws_service_range("13.248.11.0", ipv4_service_ranges)) > 0
 
+    assert str(ipv4_service_ranges[0]) == '13.248.118.0/24 is allocated to the AMAZON service in the eu-west-1 region'
+
     with pytest.raises(ValueError):
         get_aws_service_range("13x.248.11.0", ipv4_service_ranges)
+
+    with pytest.raises(ValueError):
+        get_aws_service_range("13.248.11.0.12", ipv4_service_ranges)
+
+    try:
+        get_aws_service_range("13.248.11.0.12", ipv4_service_ranges)
+    except ValueError as e:
+        assert str(e) == "Address must be a valid IPv4 address"
+
+    assert len(get_aws_service_range("88.248.11.0", ipv4_service_ranges)) == 0

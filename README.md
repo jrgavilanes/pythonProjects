@@ -36,6 +36,8 @@ https://codechalleng.es/tips/robust-sorting-with-a-function
 
 https://codechalleng.es/tips/how-to-use-caching-memoization
 
+https://codechalleng.es/tips/getpass-module
+
 ## General tips
 
 Setear prompt minimalista

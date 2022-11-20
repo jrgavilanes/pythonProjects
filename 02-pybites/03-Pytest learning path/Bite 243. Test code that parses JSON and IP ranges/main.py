@@ -69,5 +69,5 @@ if __name__ == '__main__':
     urlretrieve(URL, PATH)
     ipv4_service_ranges = parse_ipv4_service_ranges(PATH)
     print(get_aws_service_range("13.248.11.0", ipv4_service_ranges))
-    # print(get_aws_service_range("192.0.2.8", ipv4_service_ranges))
-    print(get_aws_service_range("13.248.1x.0", ipv4_service_ranges))
+    print(get_aws_service_range("192.0.2.8.12", ipv4_service_ranges))
+    # print(get_aws_service_range("13.248.1x.0", ipv4_service_ranges))
